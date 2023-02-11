@@ -4,12 +4,12 @@ from discord import app_commands
 import random
 from columnar import columnar
 import json
+import sys
 
 questions = {}
 client = discord.Client(intents=discord.Intents.all())
 
-token = "MTA0NDk3Mzc2OTk4ODUxMzg2Mg.Gtczmq.-U9IaD_SUCT8qGXEHnYytxbHeI_wL1-rbQH22k"
-guild_n = "Geoguessr and chill"
+token = sys.argv[1:]
 
 @client.event
 async def on_ready():
